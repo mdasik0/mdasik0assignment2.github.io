@@ -9,6 +9,12 @@
     background: rgba(255, 144, 14, 0.1);
     box-sizing: border-box;
   }
+  img {
+    transition: opacity 1s;
+  }
+  img:hover{
+    opacity: 90%;
+  }
 
 /* nav section */
 nav {
@@ -57,7 +63,102 @@ nav ul li:hover {
     color: white;
     font-weight: 500;
     margin-top: 30px;
+    transition: background-color 0.30s, color 0.30s ;
+}
+.explore-btn:hover {
+    background-color: #ffe7cd;
+    color: #FF900E;
 }
 .banner {
     margin: 50px auto 45px;
+}
+/* Features section */
+.feature-images {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 24px;
+    grid-column-gap: 24px;
+}
+
+.our-features {
+    display: flex;
+    align-items: center;
+    margin: 85px auto;
+    gap: 72px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.service-title {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.gray {
+    font-weight: 400;
+    color: gray;
+}
+.yellow {
+    color: #FF900E;
+}
+/* features list
+================== */
+.features-title {
+    width: 100%;
+    max-width: 537px;
+}
+.work-explained {
+    color: #727272;
+    margin-bottom: 30px;
+}
+.features-we-provide {
+    width: 100%;
+    max-width: 1440px ;
+    display: flex;
+    margin: 0 auto;  
+}
+.list-title {
+    border: ridge  #FF900E;
+    border-width: 0px 0px 0px 8px;
+    padding-left: 15px;
+    margin-bottom: 24px;
+}
+.card {
+    box-sizing: border-box;
+    padding: 30px 30px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    height: 171px;
+    width: 586px;
+    margin-bottom: 20px;
+}
+.card-title {
+    margin-bottom: 10px;
+}
+.card-ol {
+    height: 78px;
+    width: 514px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.architect-img {
+    margin-left: 54px;
+}
+.ten-years {
+    padding: 20px;
+    color: white;
+    background-color: #FF900E;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    bottom: -1550px;
+    right: 1420px
+}
+/* facts list
+=============== */
+.facts-info {
+    width: 100%;
+    max-width: 586px;
+}
+.facts-title {
+    margin-bottom: 24px;
 }
