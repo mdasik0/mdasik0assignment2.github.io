@@ -26,6 +26,7 @@ nav {
     width: 100%;
     margin: 0 auto;
     padding-top: 55px;
+    box-sizing: border-box;
 }
 .logo {
     animation: lies 500ms ease-in;
@@ -55,8 +56,9 @@ nav ul li {
 }
 .header-info {
     text-align: center;
-    width: 850px;
+    width: 100%;
     margin-top: 30px;
+    max-width: 850px;
 }
 .explore-btn {
     background: #FF900E;
@@ -74,6 +76,7 @@ nav ul li {
 }
 .banner {
     margin: 50px auto 45px;
+    max-width: 1440px;
 }
 /* Features section */
 .feature-images {
@@ -395,4 +398,45 @@ nav ul li {
     100% {
         transform:scale(1) translateY(0px) rotate(0deg);
     }
+}
+/* Media Querry
+^^^^^^^^^^^^^^^^^ */
+/* Mobile deveices
++++++++++++++++++++ */
+
+@media only screen and (max-width:688px) {
+    nav ul{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+    nav{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .feature-images {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .our-features,
+     .features-we-provide,
+      .working-tabs,
+       .sponser-brands,
+        .extra-cards-container
+    {
+        flex-direction: column;
+    }
+    .working-tabs,
+    .sponser-brands,
+    .extra-cards-container,
+    .architect-img {
+        align-items: center;
+        gap: 50px;
+    }
+    .banner,
+    .architect-img,
+    .work-explained,
+    .card {
+        width: 100%;
+    }
+
 }
