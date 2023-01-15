@@ -435,7 +435,8 @@ nav ul li {
     .banner,
     .architect-img,
     .work-explained,
-    .card {
+    .card,
+    .extra {
         width: 100%;
     }
 
