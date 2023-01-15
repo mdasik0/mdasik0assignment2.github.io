@@ -15,7 +15,9 @@
   img:hover{
     opacity: 90%;
   }
-
+:root {
+    --background-color: #FF900E ;
+}
 /* nav section */
 nav {
     display: flex;
@@ -24,6 +26,9 @@ nav {
     width: 100%;
     margin: 0 auto;
     padding-top: 55px;
+}
+.logo {
+    animation: lies 500ms ease-in;
 }
 nav ul {
     display: flex;
@@ -36,9 +41,7 @@ nav ul li {
     font-size: 15px;
     transition: color 0.30s;
     cursor: pointer;
-}
-nav ul li:hover {
-    color: lightgray;
+    animation: lies 300ms ease-in;
 }
 /* About us */
 .about-us-seciton {
@@ -63,7 +66,7 @@ nav ul li:hover {
     color: white;
     font-weight: 500;
     margin-top: 30px;
-    transition: background-color 0.30s, color 0.30s ;
+    transition: background-color 0.30s, color 0.30s;
 }
 .explore-btn:hover {
     background-color: #ffe7cd;
@@ -109,12 +112,14 @@ nav ul li:hover {
 .work-explained {
     color: #727272;
     margin-bottom: 30px;
+    width: 545px;
 }
 .features-we-provide {
     width: 100%;
     max-width: 1440px ;
     display: flex;
-    margin: 0 auto;  
+    margin: 0 auto; 
+    justify-content: space-between; 
 }
 .list-title {
     border: ridge  #FF900E;
@@ -131,6 +136,7 @@ nav ul li:hover {
     width: 586px;
     margin-bottom: 20px;
 }
+
 .card-title {
     margin-bottom: 10px;
 }
@@ -141,7 +147,7 @@ nav ul li:hover {
     overflow: hidden;
 }
 .architect-img {
-    margin-left: 54px;
+    position: relative;
 }
 .ten-years {
     padding: 20px;
@@ -150,15 +156,158 @@ nav ul li:hover {
     border-radius: 5px;
     border: none;
     position: absolute;
-    bottom: -1550px;
-    right: 1420px
+    bottom: 0;
+    left: 0px;
+}
+.image-section {
+    position: relative;
 }
 /* facts list
 =============== */
 .facts-info {
     width: 100%;
-    max-width: 586px;
+    max-width: 1440px;
+    margin: 120px auto;
 }
 .facts-title {
     margin-bottom: 24px;
+}
+.working-tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.tabs {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #FF900E;
+    cursor: pointer;
+}
+.title-num {
+    font-size: 45px;
+    font-weight: 600px;
+    color: #424242;
+    margin-top: 10px;
+}
+.title-text {
+    color: #424242;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+}
+/* tabs animation
+=================== */
+
+
+/* Sponsor section
+=================== */
+.sponsor-head-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+.sponsor-head-align p {
+    text-align: center;
+}
+.sponser-brands {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto 50px;
+    
+}
+/*+++++++++++++++++++
+   Extra section 
++++++++++++++++++++*/
+.extra-section {
+    background-color: #FF900E ;
+    margin-bottom: 50px;
+}
+.extra-section-title {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;    
+}
+.section-explained {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.extra-cards-container {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    column-gap: 40px;
+}
+.extra-1 {
+    background-image: url(../images/extra-1.jpg),linear-gradient(to top,rgba(0, 0, 0, 0.726),rgba(0, 0, 0, 0));
+}
+.extra-2 {
+    background-image: url(../images/extra-2.jpg),linear-gradient(to top,rgba(0, 0, 0, 0.726),rgba(0, 0, 0, 0));
+}
+.extra-3 {
+    background-image: url(../images/extra-3.jpg),linear-gradient(to top,rgba(0, 0, 0, 0.726),rgba(0, 0, 0, 0));
+}
+.extra {
+    background-blend-mode: multiply;
+    height: 600px;
+    width: 400px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+.extra p {
+    color: white;
+    text-align: center;
+    padding-top: 450px;
+    font-size: 40px;
+    font-weight: 600px;
+}
+.extra h4{
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+/*   Footer
+@@@@@@@@@@@@@@@ */
+.copyright-section {
+    text-align: center;
+}
+.last-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffe7cd;
+    width: 100%;
+    max-width: 1440px;
+    height: 100px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+/* animation staff
+~~~~~~~~~~~~~~~~~~~ */
+@keyframes lies {
+    0% {
+        transform: scale(0);
+    }
+    90% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
